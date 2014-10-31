@@ -9,14 +9,15 @@ after_build:
   - '"C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe" -verb:sync -source:dbDacFx="C:\projects\dacpac-sample\MyDatabase\bin\Debug\MyDatabase.dacpac" -dest:dbDacFx="%TEST_CONNECTION_STRING%",dacpacAction=Deploy,CreateNewDatabase=True'
 
 # make sure tables have been created
-test_script: |
-  $conn = New-Object System.Data.SqlClient.SqlConnection
-  $conn.ConnectionString = $env:TEST_CONNECTION_STRING
-  $conn.Open()
-  $cmd = New-Object System.Data.SqlClient.SqlCommand("select * from sysdatabases", $conn)
-  $reader = $cmd.ExecuteReader()
-  while($reader.Read())
-  {
-    Write-Host "Found database: $($reader["name"])"
-  }
-  $conn.Close()
+test_script:
+  - ps: |
+    $conn = New-Object System.Data.SqlClient.SqlConnection
+    $conn.ConnectionString = $env:TEST_CONNECTION_STRING
+    $conn.Open()
+    $cmd = New-Object System.Data.SqlClient.SqlCommand("select * from sysdatabases", $conn)
+    $reader = $cmd.ExecuteReader()
+    while($reader.Read())
+    {
+      Write-Host "Found database: $($reader["name"])"
+    }
+    $conn.Close()

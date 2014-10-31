@@ -14,10 +14,10 @@ test_script:
         $conn = New-Object System.Data.SqlClient.SqlConnection
         $conn.ConnectionString = $env:TEST_CONNECTION_STRING
         $conn.Open()
-        $cmd = New-Object System.Data.SqlClient.SqlCommand("select * from sysdatabases", $conn)
+        $cmd = New-Object System.Data.SqlClient.SqlCommand("SELECT * FROM information_schema.tables", $conn)
         $reader = $cmd.ExecuteReader()
         while($reader.Read())
         {
-          Write-Host "Found database: $($reader["name"])"
+          Write-Host "Table: $($reader["table_name"])"
         }
         $conn.Close()

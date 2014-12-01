@@ -6,3 +6,4 @@ deploy:
   - provider: SqlDatabase
     artifact: MyDatabase
     connection_string: 'server=(local)\SQLEXPRESS;database=test102;Integrated security=SSPI;'
+    drop_objects_not_in_source: true

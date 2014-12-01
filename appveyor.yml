@@ -1,3 +1,8 @@
 artifacts:
   - path: MyDatabase\bin\debug\MyDatabase.dacpac
     name: MyDatabase
+
+deploy:
+  - provider: SqlDatabase
+    artifact: MyDatabase
+    connection_string: 'server=(local)\SQLEXPRESS;database=test102;Integrated security=SSPI;'

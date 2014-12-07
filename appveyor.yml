@@ -8,6 +8,6 @@ artifacts:
 deploy:
   - provider: SqlDatabase
     artifact: MyDatabase
-    connection_string: 'Server=(local)\SQL2012SP1;Database=master;User ID=sa;Password=Password12!'
+    connection_string: 'Server=(local)\SQL2012SP1;Database=test102;User ID=sa;Password=Password12!'
     drop_objects_not_in_source: true
     backup_database_before_changes: true

@@ -9,7 +9,7 @@ deploy:
   - provider: SqlDatabase
     artifact: MyDatabase
     connection_string:
-      secure: f/YeQsWruv6i3ls/WBxvMotaiNqZViJkXKWV8GZGnRW0mUGPI51cZw6nimdh9VlKO3lUKqZXbjUIw8ptqBfJN1r7XIsMPea09P1iQ3P/XzwkIHmTRVBUk9cBodylHbAdB9UsqzuB2Q4RFm1SGQarX2kkESlVcdoDpGBBuTnx0z1J1/iwbfN0d7t27HdgJ1uKmQS3YQNrdqKbpCvuyimvj/7VqOFdHYLCKwhsX6zN6F8=
+      secure: r5FHTTIfknKXrvMwsfqC/swG2n81GGc0PruruI5DVSMAocqz+E23+fTQQS3UO0FSkrGygtgdIGZOCV3ZEHs8vclEa5JZ14LDeaHdZQTQJ8V7CQOYM+BA2qiJ2+vu6T7crpkaYmnOhLAS8dgkFA3dRFPURyIGhdZP9pqJPJPIBgiGOFnSRnvPsFP+I/haV4gn52oH6/EvSZyINz7oDduwUTI9X3UeIw9cAR8DQKtf/Hk=
     script_database_options: false
     drop_objects_not_in_source: true
     #backup_database_before_changes: true

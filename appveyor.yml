@@ -1,3 +1,6 @@
+build:
+  parallel: true
+
 artifacts:
   - path: MyDatabase\bin\debug\MyDatabase.dacpac
     name: MyDatabase

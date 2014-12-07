@@ -12,4 +12,5 @@ deploy:
       secure: f/YeQsWruv6i3ls/WBxvMotaiNqZViJkXKWV8GZGnRW0mUGPI51cZw6nimdh9VlKO3lUKqZXbjUIw8ptqBfJN1r7XIsMPea09P1iQ3P/XzwkIHmTRVBUk9cBodylHbAdB9UsqzuB2Q4RFm1SGQarX2kkESlVcdoDpGBBuTnx0z1J1/iwbfN0d7t27HdgJ1uKmQS3YQNrdqKbpCvuyimvj/7VqOFdHYLCKwhsX6zN6F8=
     script_database_options: false
     drop_objects_not_in_source: true
+    backup_database_before_changes: true
     ignore_file_and_log_file_path: true

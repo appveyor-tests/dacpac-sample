@@ -1,3 +1,6 @@
+services:
+  - mssql2012sp1
+
 artifacts:
   - path: MyDatabase\bin\debug\MyDatabase.dacpac
     name: MyDatabase
@@ -5,6 +8,6 @@ artifacts:
 deploy:
   - provider: SqlDatabase
     artifact: MyDatabase
-    connection_string: 'server=(local)\SQLEXPRESS;database=test102;Integrated security=SSPI;'
+    connection_string: 'Server=(local)\SQL2012SP1;Database=master;User ID=sa;Password=Password12!'
     drop_objects_not_in_source: true
     backup_database_before_changes: true

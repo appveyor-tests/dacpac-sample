@@ -6,6 +6,6 @@ deploy:
   - provider: SqlDatabase
     artifact: MyDatabase
     connection_string:
-      secure: f/YeQsWruv6i3ls/WBxvMqyzEc9hoXzgnIWn4bbEDfO3q+lDOXGRyt4QV5NIgBi+F7MXwxr8yWiPyJ3/PlZXjyC6G21QocFIGIgTiEX/2IQRg5BPe/y86iivLgoOv1TVS5YoHpq5G/QW5WCAd5VbQjJPFGo6j+OLPcdUfM2COgd24awDmbCCYOw4Sny0rQoLsf79Lpjr6FinPkl/GHI14pCoKBQHulNdfnWAzZFYBzBFZngfcaskpoEbX/cuF3HD
+      secure: f/YeQsWruv6i3ls/WBxvMotaiNqZViJkXKWV8GZGnRW0mUGPI51cZw6nimdh9VlKO3lUKqZXbjUIw8ptqBfJN1r7XIsMPea09P1iQ3P/XzwkIHmTRVBUk9cBodylHbAdB9UsqzuB2Q4RFm1SGQarX2kkESlVcdoDpGBBuTnx0z1J1/iwbfN0d7t27HdgJ1uKmQS3YQNrdqKbpCvuyimvj/7VqOFdHYLCKwhsX6zN6F8=
     drop_objects_not_in_source: true
     backup_database_before_changes: true

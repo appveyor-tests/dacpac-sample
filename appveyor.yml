@@ -1,11 +1,22 @@
 environment:
-  TEST_CONNECTION_STRING: Server=(local)\SQL2008R2SP2;Database=master;User ID=sa;Password=Password12!
+  TEST_CONNECTION_STRING: Server=(local)\SQL2008R2SP2;Database=test101;User ID=sa;Password=Password12!
 
 services:
   - mssql2008r2sp2
 
-build: off
+build_script:
+  - sqlcmd -S "(local)\SQL2008R2SP2" -U "sa" -P "Password12!" -i "test.sql" -d "master" -o AccountServerSetup.out
 
 # make sure tables have been created
 test_script:
-  - sqlcmd -S "(local)\SQL2008R2SP2" -U "sa" -P "Password12!" -i "test.sql" -d "master" -o AccountServerSetup.out
+- ps: |
+        $conn = New-Object System.Data.SqlClient.SqlConnection
+        $conn.ConnectionString = $env:TEST_CONNECTION_STRING
+        $conn.Open()
+        $cmd = New-Object System.Data.SqlClient.SqlCommand("SELECT * FROM information_schema.tables", $conn)
+        $reader = $cmd.ExecuteReader()
+        while($reader.Read())
+        {
+        Write-Host "Table: $($reader["table_name"])"
+        }
+        $conn.Close()

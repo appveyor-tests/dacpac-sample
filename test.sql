@@ -1,7 +1,10 @@
-create database test101;
+create database test101
+go
 
-use test101;
+use test101
+go
 
 create table Products (
   ProductID int
 )
+go

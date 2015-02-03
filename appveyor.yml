@@ -1,12 +1,10 @@
 environment:
-  TEST_CONNECTION_STRING: Server=(local)\SQL2014;Database=MyDatabase_test;User ID=sa;Password=Password12!
+  TEST_CONNECTION_STRING: Server=(local)\SQL2008R2SP2;Database=master;User ID=sa;Password=Password12!
 
 services:
-  - mssql2014
+  - mssql2008r2sp2
 
-# deploy .dacpac package to local SQL Server instance for integration testing
-after_build:
-  - '"C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe" -verb:sync -source:dbDacFx="C:\projects\dacpac-sample\MyDatabase\bin\Debug\MyDatabase.dacpac" -dest:dbDacFx="%TEST_CONNECTION_STRING%",dacpacAction=Deploy,CreateNewDatabase=True'
+build: off
 
 # make sure tables have been created
 test_script:

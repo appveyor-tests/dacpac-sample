@@ -1,1 +1,7 @@
-create database test101
+create database test101;
+
+use test101;
+
+create table Products (
+  ProductID int
+)

@@ -1,3 +1,5 @@
+os: Default Azure
+
 environment:
   TEST_CONNECTION_STRING: Server=(local)\SQL2014;Database=MyDatabase_test;User ID=sa;Password=Password12!
 

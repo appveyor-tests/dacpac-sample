@@ -1,4 +1,4 @@
-os: Previous Visual Studio 2015
+#os: Previous Visual Studio 2015
 
 environment:
   TEST_CONNECTION_STRING: Server=(local)\SQL2016;Database=MyDatabase_test;User ID=sa;Password=Password12!

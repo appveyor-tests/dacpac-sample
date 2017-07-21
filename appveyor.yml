@@ -4,8 +4,8 @@ environment:
 install:
 #- '"C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.2 Tools\gacutil.exe" /i "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\140\Microsoft.SqlServer.TransactSql.ScriptDom.dll"'
 - where sqlpackage
-- nuget install Microsoft.SqlServer.Types -ExcludeVersion
-- '"C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.2 Tools\gacutil.exe" /i ".\Microsoft.SqlServer.Types\lib\net40\Microsoft.SqlServer.Types.dll"'
+#- nuget install Microsoft.SqlServer.Types -ExcludeVersion
+#- '"C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.2 Tools\gacutil.exe" /i ".\Microsoft.SqlServer.Types\lib\net40\Microsoft.SqlServer.Types.dll"'
 
 services:
   - mssql2014
